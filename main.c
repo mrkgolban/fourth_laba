@@ -4,7 +4,7 @@
 int my_strlen(char* str)
 {
     int s = 0;
-    while (isalpha(*(str + s)) || isdigit(*(str + s)))
+    while (*(str + s) != '\0')
     {
         s += 1;
     }
@@ -54,7 +54,7 @@ int main()
     char* string = "abcdef123";
     char* string2 = "1";
     printf("%d\n", my_strlen(string));
-    string2 = "0";
+    string2 = "123";
     printf("%s\n%s\n", string2, string);
     printf("%d\n", my_strstr(string, string2));
     
